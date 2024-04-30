@@ -1,0 +1,88 @@
+@if(isGridEmpty){
+  <div class="erori">სამწუხაროდ დამატებული დავალებები ჯერ არ მოიძებნება. 
+  </div>
+
+}
+
+
+@if (ComplateList && ComplateList.length>0) {
+    <table mat-table [dataSource]="ComplateList" class="mat-elevation-z8">
+
+    
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID. </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            
+          <th mat-header-cell *matHeaderCellDef> მიმდინარე დავალებები </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="status">   
+
+            
+            <th mat-header-cell *matHeaderCellDef> სტატუსი </th>
+            <td mat-cell *matCellDef="let element" style="color: #FFDF8C;"> მიმდინარე  </td>
+          </ng-container>
+
+
+          <ng-container matColumnDef="action">   
+
+            
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element" style="color: #FFDF8C;"> 
+              <button mat-raised-button color="primary" (click)="edit(element.id)" class="mr-2">განახლება</button>
+              <button mat-raised-button color="warn" (click)="delete(element.id)" class="">წაშლა</button>
+            </td>
+          </ng-container>
+      
+       
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+}
+
+<br>
+
+@if (ComplateListend && ComplateListend.length>0) {
+    <table mat-table [dataSource]="ComplateListend" class="mat-elevation-z8">
+
+    
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID. </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            
+          <th mat-header-cell *matHeaderCellDef> დასრულებული დალებები </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+    
+        <ng-container matColumnDef="status"> 
+
+            
+            <th mat-header-cell *matHeaderCellDef> სტატუსი </th>
+            <td mat-cell *matCellDef="let element" style="color: #8FF4DB"> დასრულებული  </td>
+          </ng-container>
+      
+
+          <ng-container matColumnDef="action">   
+
+            
+            <th mat-header-cell *matHeaderCellDef>  </th>
+            <td mat-cell *matCellDef="let element" style="color: #FFDF8C;"> 
+              <button mat-raised-button color="primary" (click)="edit(element.id)" class="mr-2">განახლება</button>
+              <button mat-raised-button color="warn" (click)="delete(element.id)" class="">წაშლა</button>
+            </td>
+          </ng-container>
+       
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+}
+

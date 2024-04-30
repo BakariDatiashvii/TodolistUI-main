@@ -1,0 +1,19 @@
+<div>
+  <h2>Change Password</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="activateCode">Activation Code:</label>
+      <input type="text" id="activateCode" name="activateCode" [(ngModel)]="model.activateCode" required>
+    </div>
+    <div>
+      <label for="password">New Password:</label>
+      <input type="password" id="password" name="password" [(ngModel)]="model.password" required>
+    </div>
+    <div>
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="model.confirmPassword" required>
+    </div>
+    <button type="submit">Change Password</button>
+  </form>
+</div>
+

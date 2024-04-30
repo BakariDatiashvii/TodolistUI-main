@@ -1,0 +1,20 @@
+<div>
+    <button mat-button (click)="nextWeek()">Next Week</button>
+    <button mat-button (click)="saveText(textInput.value)">Save</button>
+  </div>
+  
+  <mat-form-field>
+    <input matInput #textInput placeholder="Enter Text">
+  </mat-form-field>
+  
+  <table>
+    <tr>
+      <th>Date</th>
+      <!-- Add other headers as needed -->
+    </tr>
+    <tr *ngFor="let date of getDateRange(startDate, endDate)">
+      <td>{{ formatDate(date) }}</td>
+      <!-- Add other cells as needed -->
+    </tr>
+  </table>
+  

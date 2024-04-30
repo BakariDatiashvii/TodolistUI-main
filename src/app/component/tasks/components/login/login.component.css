@@ -1,0 +1,54 @@
+/* Assuming you're using Angular Material styles */
+/* You can adjust these styles according to your design */
+
+/* Centering the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Styling form fields */
+  input[type="email"],
+  input[type="password"] {
+    width: 300px; /* Adjust width as needed */
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  /* Styling labels */
+  label {
+    margin-top: 10px;
+  }
+  
+  /* Styling button */
+  button[type="submit"] {
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Angular Material primary color */
+    color: white;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade of primary color */
+  }
+  
+  /* Styling link */
+  a {
+    margin-top: 10px;
+    color: #007bff; /* Angular Material primary color */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

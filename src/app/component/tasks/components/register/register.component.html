@@ -1,0 +1,28 @@
+<form class="mat-form" (ngSubmit)="onSubmit()">
+  <mat-form-field class="form-field">
+    <input matInput type="email" name="email" [(ngModel)]="model.email" placeholder="Email" required>
+  </mat-form-field>
+
+  <mat-form-field class="form-field">
+    <input matInput type="password" name="password" [(ngModel)]="model.password" placeholder="Password" required>
+  </mat-form-field>
+
+  <mat-form-field class="form-field">
+    <input matInput type="text" name="firstName" [(ngModel)]="model.firstName" placeholder="First Name" required>
+  </mat-form-field>
+
+  <mat-form-field class="form-field">
+    <input matInput type="text" name="lastName" [(ngModel)]="model.lastName" placeholder="Last Name" required>
+  </mat-form-field>
+
+  <mat-form-field class="form-field">
+    <input matInput type="text" name="privateNumber" [(ngModel)]="model.privateNumber" placeholder="Private Number" required>
+  </mat-form-field>
+
+  <mat-form-field class="form-field">
+    <input matInput type="text" name="activateCode" [(ngModel)]="model.activateCode" placeholder="Activate Code" required>
+  </mat-form-field>
+  <a routerLink="/send-code-register">აქტივაციის კოდის გაგზავნა</a>
+
+  <button mat-raised-button type="submit">Register</button>
+</form>
