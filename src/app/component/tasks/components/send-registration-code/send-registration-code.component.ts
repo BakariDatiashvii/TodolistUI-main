@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
+import { CommonModule } from '@angular/common';
+
+import { FormsModule } from '@angular/forms'; // Import FormsModule for ngModel
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { environment } from '../../../../environments/environment';
-import { FormsModule } from '@angular/forms';
 
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
+
 @Component({
   selector: 'app-send-registration-code',
   standalone: true,
-  imports: [RouterLink,FormsModule,MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule],
+  imports: [RouterLink,CommonModule,FormsModule,MatFormFieldModule,MatInputModule],
   templateUrl: './send-registration-code.component.html',
   styleUrl: './send-registration-code.component.css'
 })

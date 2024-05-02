@@ -1,0 +1,25 @@
+<div class="container mx-auto px-10 my-10">
+    <p class="text-3xl text-maincolor-50 mt-10 mb-8">კატეგორიები და ექითები</p>
+  
+    <div class="mat-card-container">
+      <mat-card class="custom-card">
+        <table mat-table [dataSource]="categoryDoctorList" class="mat-elevation-z8">
+          <!-- Category Column -->
+          <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef> კატეგორია </th>
+            <td mat-cell *matCellDef="let element"> {{ element.categoryName }} </td>
+          </ng-container>
+  
+          <!-- Doctor Column -->
+          <ng-container matColumnDef="doctor">
+            <th mat-header-cell *matHeaderCellDef> ექითები </th>
+            <td mat-cell *matCellDef="let element"> {{ element.doctorFullName }} </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </mat-card>
+    </div>
+  </div>
+  

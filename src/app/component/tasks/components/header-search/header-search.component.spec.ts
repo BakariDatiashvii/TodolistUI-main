@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskGridComponent } from './task-grid.component';
+import { HeaderSearchComponent } from './header-search.component';
 
-describe('TaskGridComponent', () => {
-  let component: TaskGridComponent;
-  let fixture: ComponentFixture<TaskGridComponent>;
+describe('HeaderSearchComponent', () => {
+  let component: HeaderSearchComponent;
+  let fixture: ComponentFixture<HeaderSearchComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TaskGridComponent]
+      imports: [HeaderSearchComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(TaskGridComponent);
+    fixture = TestBed.createComponent(HeaderSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
